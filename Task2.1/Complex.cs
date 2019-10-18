@@ -39,9 +39,9 @@ namespace Task2._1
             {
                 res += $"{Re:0.##} ";
                 if (Im < 0)
-                    res += (Math.Abs(Im) - 1 < epsilon) ? $"+ i" : $"- {Im:0.##}i";
+                    res += (Math.Abs(Im) - 1 < epsilon) ? $"- i" : $"- {Math.Abs(Im):0.##}i";
                 else
-                    res += (Math.Abs(Im) - 1 < epsilon) ? $"+ i" : $"- {Im:0.##}i";
+                    res += (Math.Abs(Im) - 1 < epsilon) ? $"+ i" : $"+ {Im:0.##}i";
             }
 
             return res;
