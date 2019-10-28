@@ -26,14 +26,17 @@ namespace Task2._1
             if (Math.Abs(Re) < epsilon && Math.Abs(Im) < epsilon)
             {
                 res = "0";
-            } else if (Math.Abs(Re) < epsilon)
+            }
+            else if (Math.Abs(Re) < epsilon)
             {
-                res = $"{Im:0.##}i";
-            } else if (Math.Abs(Im) < epsilon)
+                if (Math.Abs(Im) -1< epsilon)
+                    return Im > 0 ? "i" : "-i";
+                else
+                    return $"{Im}";
+            }
+            else if (Math.Abs(Im) < epsilon)
             {
-                if (Re < 0)
-                    res += "-";
-                res += $"{Re:0.##}";
+                res += $"{Re:0.##;-0.##;0}";
             }
             else
             {
