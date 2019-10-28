@@ -30,6 +30,7 @@ namespace Task2._1
 
             Console.WriteLine(new Complex(-1, -1));
 
+            Console.WriteLine(Complex.CreateByRadiusAndArgument(10,Math.PI/3));
         
         Console.ReadLine();
         }

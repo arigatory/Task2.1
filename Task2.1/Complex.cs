@@ -11,13 +11,25 @@ namespace Task2._1
         private readonly double epsilon = 1e-4;
         public double Re { get; set; }
         public double Im { get; set; }
-        public double Phi { get; set; }
-        public double R { get; set; }
+        public double Arg
+        {
+            get { return Math.Atan2(Im, Re); }
+        }
+
+        public double Radius
+        {
+            get { return Abs; }
+        }
 
         public Complex(double re = 0, double im = 0)
         {
             Re = re;
             Im = im;
+        }
+
+        public static Complex CreateByRadiusAndArgument(double radius, double angle)
+        {
+            return new Complex(radius * Math.Cos((angle)), radius * Math.Sin(angle));
         }
 
         public override string ToString()
@@ -32,7 +44,7 @@ namespace Task2._1
                 if (Math.Abs(Im) -1< epsilon)
                     return Im > 0 ? "i" : "-i";
                 else
-                    return $"{Im}";
+                    return $"{Im:0.##}";
             }
             else if (Math.Abs(Im) < epsilon)
             {
