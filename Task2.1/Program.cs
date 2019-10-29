@@ -10,29 +10,18 @@ namespace Task2._1
     {
         static void Main(string[] args)
         {
-            Complex c1 = new Complex(-1,0);
+            Complex c1 = new Complex(1,2);
             Complex c2 = new Complex(3,4);
 
             Console.WriteLine(c1);
             Console.WriteLine(c2);
 
-            Console.WriteLine(new Complex(0, 0));
+            Console.WriteLine(c1+c2);
+            Complex c3 = new Complex(2, 0);
+            Complex c4 = new Complex(3);
+            Console.WriteLine(c3*c4);
 
-            Console.WriteLine(new Complex(1, 0));
-
-            Console.WriteLine(new Complex(-1, 0));
-
-            Console.WriteLine(new Complex(0, 1));
-
-            Console.WriteLine(new Complex(0, -1));
-
-            Console.WriteLine(new Complex(1, 1));
-
-            Console.WriteLine(new Complex(-1, -1));
-
-            Console.WriteLine(Complex.CreateByRadiusAndArgument(10,Math.PI/3));
-        
-        Console.ReadLine();
+            Console.ReadLine();
         }
     }
 }

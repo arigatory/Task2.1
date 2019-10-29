@@ -66,5 +66,30 @@ namespace Task2._1
         {
             get { return Math.Sqrt(Re * Re + Im * Im); }
         }
+
+        public static Complex operator+(Complex c1, Complex c2)
+        {
+            return new Complex(c1.Re + c2.Re, c1.Im + c2.Im);
+        }
+
+        public static Complex operator-(Complex c1, Complex c2)
+        {
+            return new Complex(c1.Re - c2.Re, c1.Im - c2.Im);
+        }
+
+        public static Complex operator*(Complex c1, Complex c2)
+        {
+            return new Complex(c1.Re*c2.Re-c1.Im*c2.Im, c1.Re*c2.Im+c1.Im*c2.Re);
+        }
+
+        public static Complex Reciprocal(Complex c)
+        {
+            return new Complex(c.Re/c.Abs,c.Im/c.Abs);
+        }
+
+        public static Complex operator/(Complex c1, Complex c2)
+        {
+            return c1*Complex.Reciprocal(c2);
+        }
     }
 }
