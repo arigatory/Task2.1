@@ -10,17 +10,20 @@ namespace Task2._1
     {
         static void Main(string[] args)
         {
-            Complex c1 = new Complex(1,2);
-            Complex c2 = new Complex(3,4);
-
+            Console.WriteLine("Демонтрация функционала кода:");
+            Console.WriteLine();
+            Console.WriteLine("Создаем два числа:");
+            Complex c1 = new Complex(21, 2);
+            Complex c2 = new Complex(5,1);
             Console.WriteLine(c1);
             Console.WriteLine(c2);
-
-            Console.WriteLine(c1+c2);
-            Complex c3 = new Complex(2, 0);
-            Complex c4 = new Complex(3);
-            Console.WriteLine(c3*c4);
-
+            Console.WriteLine($"Разность двух чисел: {c1 - c2}");
+            Console.WriteLine($"Сумма двух чисел: {c2 + 5.0}");
+            Console.WriteLine($"Произведение: {c1*c2}");
+            Console.WriteLine($"Частное: {c1/c2}");
+            Console.WriteLine($"Получение double: {(double)c1}");
+            Console.WriteLine($"Сравнение на равенство: {c1==c2}");
+            
             Console.ReadLine();
         }
     }
